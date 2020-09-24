@@ -1,0 +1,17 @@
+.newQuizScrolbar{
+    height: 100px;
+    background-color: tan;
+}
+
+@media (min-width: 1024px){
+    .newQuizScrolbar{
+        height: 100%;
+        width: 220px;
+    }
+}
+
+@media (min-width: 1250px){
+    .newQuizScrolbar{
+        width: 300px;
+    }
+}

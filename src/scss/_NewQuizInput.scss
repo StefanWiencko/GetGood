@@ -1,0 +1,33 @@
+.newQuizForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+        input{
+            height: 30px;
+            width: 275px;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .newQuizForm{
+        label{
+            input{
+                width: 500px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .newQuizForm{
+        justify-content: center;
+    }
+}

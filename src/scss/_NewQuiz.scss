@@ -1,0 +1,14 @@
+.newQuizContent{
+    background-color: springgreen;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 1024px){
+    .newQuizContent{
+        flex-direction: row-reverse;
+        height: calc(100vh - 110px);
+    }
+}

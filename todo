@@ -1,0 +1,39 @@
+       MUST HAVE
+wygląd główny 
+nowy quiz
+    navbar ze zrobionymi slajdami 
+nav z quizami + start quiz + edit
+randomizowane pytania
+take quiz
+summary
+
+        SHOULD HAVE
+login i przechowywanie quizow
+avatar
+togglowane dodawanie zdjecia lub nie
+togglowane odpowiedzi abcd lub opisowo
+start over ????
+        COULD HAVE
+search quiz
+friends list
+system punktów + highscores
+sharowanie quizów innym ludziom
+        WONT HAVE
+
+
+JSON SERVER
+
+
+TASKS
+
+dodawanie nowego quizu ***
+wypełnianie quizu{
+zliczanie poprawnych odpowiedzi
+podsumowanie quizu
+first logi in ( imie do local storage)
+
+ew del element
+
+CSSy{
+    widok główny
+}
