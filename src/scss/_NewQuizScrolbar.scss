@@ -1,6 +1,9 @@
 .newQuizScrolbar{
     height: 100px;
     background-color: tan;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media (min-width: 1024px){

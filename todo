@@ -37,3 +37,43 @@ ew del element
 CSSy{
     widok główny
 }
+
+snippety
+
+  const updateCar = (obj) => {
+    fetch(`http://localhost:3000/cars`, {
+      method: "POST",
+      body: JSON.stringify(obj),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(fetchAllCars);
+  };
+
+  const deleteCar = (id) => {
+    console.log("DELETE CAR WITH ID: ", id);
+    fetch(`http://localhost:3000/cars/${id}`, {
+      method: "DELETE",
+    }).then(fetchAllCars);
+  };
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        const newCar = {
+            name: inputData.name,
+            brand: inputData.brand,
+            engine:{
+                type: inputData.type,
+                hp: inputData.hp
+            }
+
+        }
+        updateCar(newCar)
+    }
+
+  const fetchAllCars = () => {
+    fetch("http://localhost:3000/cars")
+      .then((resp) => resp.json())
+      .then((allCars) => setCar(allCars));
+  };

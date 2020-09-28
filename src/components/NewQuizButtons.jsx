@@ -2,11 +2,11 @@ import React from 'react'
 import NewQuizButton from './NewQuizButton'
 import '../scss/_NewQuizButtons.scss'
 
-function AddQuizButtons() {
+function AddQuizButtons({newQuestionHandler, quizSubmit}) {
     return (
         <div className='buttonsBar'>
-            <NewQuizButton/>
-            <NewQuizButton/>
+            <NewQuizButton clickHandler={newQuestionHandler}/>
+            <NewQuizButton clickHandler={quizSubmit}/>
             <NewQuizButton/>
         </div>
     )

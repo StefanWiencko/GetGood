@@ -1,9 +1,9 @@
 import React from 'react'
 import '../scss/_NewQuizButton.scss'
 
-function AddQuizButton() {
+function AddQuizButton({clickHandler}) {
     return (
-        <div className='quizButton'>
+        <div onClick={clickHandler} className='quizButton'>
             
         </div>
     )

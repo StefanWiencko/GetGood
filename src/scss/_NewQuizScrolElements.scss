@@ -1,0 +1,16 @@
+.newQuizScrolElements{
+    height: 100%;
+    background-color: blueviolet;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.newQuizScrolElement{
+    height: 60px;
+    background-color: brown;
+    margin: 10px 10px 0 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
