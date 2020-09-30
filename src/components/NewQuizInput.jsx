@@ -1,18 +1,18 @@
 import React from "react";
 import "../scss/_NewQuizInput.scss";
 
-function NewQuizInput({ changeHandler, elementData }) {
+function NewQuizInput({ changeHandler, elementData, quizData }) {
   return (
     <form className="newQuizForm">
-      <label>
-        Tytuł:
+      {quizData.length === 0 && <label>
+        Nazwa Quizu:
         <input
           onChange={changeHandler}
           type="text"
           name="title"
           value={elementData.title}
         />
-      </label>
+      </label>}
       <label>
         Treść pytania:
         <input

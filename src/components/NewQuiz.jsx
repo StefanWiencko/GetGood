@@ -14,54 +14,57 @@ function NewQuiz() {
     answer3: "",
   });
 
-  const [submit, setSubmit] = useState();
-
   const [quizData, setQuizData] = useState([]);
 
-  //   const API = "http://localhost:3000";
+  let apiObject;
 
-  //   fetch(`${API}/db`)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-
-  const quizSubmit = () => {
-    setSubmit( ()=> ({
-      name: "Biologia - Anatomia",
-      questions: [
+  if (quizData.length > 0) {
+    apiObject = {
+      name: quizData[0].title,
+      questions: quizData.map((e) => [
         {
-          content: elementData.question,
+          content: e.question,
           answers: [
             {
-              content: elementData.correctAnswer,
+              content: e.correctAnswer,
               correct: true,
             },
             {
-              content: elementData.answer1,
+              content: e.answer1,
               correct: false,
             },
             {
-              content: elementData.answer2,
+              content: e.answer2,
               correct: false,
             },
             {
-              content: elementData.answer3,
+              content: e.answer3,
               correct: false,
-            }
+            },
           ],
         },
-      ],
-    }))
+      ]),
+    };
+  }
+
+  const quizSubmit = () => {
+    if (
+      elementData.title === "" &&
+      elementData.question === "" &&
+      elementData.correctAnswer === "" &&
+      elementData.answer1 === "" &&
+      elementData.answer2 === "" &&
+      elementData.answer3 === ""
+    ) {
+      return alert("Wypełnij puste pola");
+    }
+    setQuizData((prev) => [...prev, elementData]);
     fetch(`http://localhost:4000/quizs`, {
       method: "POST",
-      body: JSON.stringify(submit),
+      body: JSON.stringify(apiObject),
       headers: {
         "Content-Type": "application/json",
-      }
+      },
     });
   };
 
@@ -70,6 +73,16 @@ function NewQuiz() {
   };
 
   const newQuestionHandler = () => {
+    if (
+      elementData.title === "" &&
+      elementData.question === "" &&
+      elementData.correctAnswer === "" &&
+      elementData.answer1 === "" &&
+      elementData.answer2 === "" &&
+      elementData.answer3 === ""
+    ) {
+      return alert("Wypełnij puste pola");
+    }
     setQuizData((prev) => [...prev, elementData]);
     setElementData({
       title: "",
@@ -79,12 +92,20 @@ function NewQuiz() {
       answer2: "",
       answer3: "",
     });
+    console.log(apiObject);
   };
   return (
     <div className="newQuizContent">
-      <NewQuizButtons  quizSubmit={quizSubmit} newQuestionHandler={newQuestionHandler} />
-      <NewQuizinput elementData={elementData} changeHandler={changeHandler} />
-      <NewQuizScrolbar  quizData={quizData} />
+      <NewQuizButtons
+        quizSubmit={quizSubmit}
+        newQuestionHandler={newQuestionHandler}
+      />
+      <NewQuizinput
+        quizData={quizData}
+        elementData={elementData}
+        changeHandler={changeHandler}
+      />
+      <NewQuizScrolbar quizData={quizData} />
     </div>
   );
 }
