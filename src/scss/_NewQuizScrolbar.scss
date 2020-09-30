@@ -1,19 +1,21 @@
 .newQuizScrolbar{
-    height: 100px;
+    height: 100%;
+            width: 220px;
     background-color: tan;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-@media (min-width: 1024px){
+@media (max-width: 1024px){
     .newQuizScrolbar{
-        height: 100%;
-        width: 220px;
+        height: 100px;
+
     }
 }
 
 @media (min-width: 1250px){
+
     .newQuizScrolbar{
         width: 300px;
     }

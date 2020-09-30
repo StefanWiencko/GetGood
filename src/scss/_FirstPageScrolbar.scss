@@ -1,0 +1,20 @@
+.firstPageScrolbar {
+  height: 100%;
+  width: 220px;
+  background-color: tan;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .firstPageScrolbar {
+    height: 100px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .firstPageScrolbar {
+    width: 300px;
+  }
+}

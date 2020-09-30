@@ -1,16 +1,17 @@
 import React from "react";
-import "../scss/_Main.scss";
-import NewQuiz from "./NewQuiz";
+import "../scss/_MainView.scss";
+import FirstPage from "./FirstPage";
 
-function Main() {
+function MainView() {
   return (
     <div className="appBody">
       <header className="header">
         <div className="logo" />
       </header>
-      <NewQuiz />
+      {/* <NewQuiz /> */}
+      <FirstPage/>
     </div>
   );
 }
 
-export default Main;
+export default MainView;

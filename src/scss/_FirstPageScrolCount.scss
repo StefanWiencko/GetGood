@@ -1,4 +1,4 @@
-.newQuizScrolCount{
+.firstPageScrolCount{
     height: 80px;
     background-color: blue;
     justify-self: flex-end;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 1024px){
-    .newQuizScrolCount{
+    .firstPageScrolCount{
         display: none;
     }
 }

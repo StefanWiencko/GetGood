@@ -1,10 +1,10 @@
-.newQuizScrolTitle{
+.firstPageScrolTitle{
     height: 80px;
     background-color: aquamarine;
 }
 
 @media (max-width: 1024px){
-    .newQuizScrolTitle{
+    .firstPageScrolTitle{
         display: none;
     }
 }
