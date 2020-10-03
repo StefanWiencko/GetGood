@@ -15,18 +15,10 @@
     align-items: center;
 }
 
-@media (max-width: 1024px){
-    .newQuizScrolElements{
-        height: 100px;
-        width: 100vw;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: row;
-        flex-grow: 0;
-    }
+// @media (max-width: 1024px){
+//     .newQuizScrolElements{
+   
+//     }
 
-    .newQuizScrolElement{
-        width: 200px;
-        flex-grow: 0;
-    }
-}
+//     .newQuizScrolElement{
+// }

@@ -1,15 +1,21 @@
-import React from 'react'
+import React,{useState} from 'react'
 import FirstPageScrolTitle from './FirstPageScrolTitle'
 import FirstPageScrolCount from './FirstPageScrolCount'
 import FirstPageScrolElements from './FirstPageScrolElements'
 import '../scss/_FirstPageScrolbar.scss'
 
-function FirstPageScrolbar() {
+function FirstPageScrolbar({allQuizes}) {
+    const [isActive, setIsActive] = useState(false)
+
+    const toggleIsActive =() =>{
+        setIsActive(!isActive)
+    }
     return (
-        <div className='firstPageScrolbar'>
+        <div className={isActive ? 'firstPageScrolbar isActive' : "firstPageScrolbar"} >
             <FirstPageScrolTitle/>
-            <FirstPageScrolElements />
-            <FirstPageScrolCount />
+            <FirstPageScrolElements allQuizes={allQuizes}/>
+            <FirstPageScrolCount allQuizes={allQuizes}/>
+            <div on className='expand' onClick={toggleIsActive} className={isActive ? 'isActiveExpand expand' : 'expand'}></div>
         </div>
     )
 }

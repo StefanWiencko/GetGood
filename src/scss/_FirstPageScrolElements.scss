@@ -17,11 +17,8 @@
 
 @media (max-width: 1024px){
     .firstPageScrolElements{
-        height: 100px;
-        width: 100vw;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: row;
+        height: 100%;
+        // width: 100vw;
         flex-grow: 0;
     }
 

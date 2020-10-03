@@ -1,6 +1,7 @@
 import React from "react";
 import "../scss/_MainView.scss";
-import FirstPage from "./FirstPage";
+// import FirstPage from "./FirstPage";
+import NewQuiz from './NewQuiz'
 
 function MainView() {
   return (
@@ -8,8 +9,8 @@ function MainView() {
       <header className="header">
         <div className="logo" />
       </header>
-      {/* <NewQuiz /> */}
-      <FirstPage/>
+      <NewQuiz />
+      {/* <FirstPage/> */}
     </div>
   );
 }

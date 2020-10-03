@@ -15,8 +15,19 @@
     }
 }
 
+@media (max-width: 1023px){
+    .newQuizForm{
+        position: absolute;
+        transform:translate(-50%,50%);
+        left: 50%;
+        top: 15%;
+    }
+}
+
 @media (min-width: 768px){
     .newQuizForm{
+        justify-content: center;
+
         label{
             input{
                 width: 500px;
@@ -26,8 +37,3 @@
     }
 }
 
-@media (min-width: 768px){
-    .newQuizForm{
-        justify-content: center;
-    }
-}
