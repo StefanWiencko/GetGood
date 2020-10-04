@@ -9,36 +9,18 @@ function TakeQuiz({ quizID }) {
     fetchAllQuizes();
   }, []);
 
-  const [quizQuestions, setQuizQuestions] = useState({
-    name: "aaa",
-    questions: [
-      [
-        {
-          content: "aa",
-          answers: [
-            {
-              content: "1",
-              correct: true,
-            },
-            {
-              content: "2",
-              correct: false,
-            },
-            {
-              content: "3",
-              correct: false,
-            },
-            {
-              content: "4",
-              correct: false,
-            },
-          ],
-        },
-      ],
-    ],
-  });
-  
+  const [quizQuestions, setQuizQuestions] = useState();
   const [questionNumber, setQuestionNumber] = useState(0);
+
+  const clickHandler = (e)=>{
+    console.log(e.target.dataset.correct)
+    if(quizQuestions.questions.length > questionNumber + 1){
+      setQuestionNumber(prev => prev + 1)
+    }else{
+      return
+    }
+    
+  }
 
   const fetchAllQuizes = () => {
     fetch("http://localhost:4000/quizs")
@@ -57,7 +39,7 @@ function TakeQuiz({ quizID }) {
   return (
     <div className="takeQuizContent">
       <TakeQuizButtons />
-      <TakeQuizQuestion quizQuestions={quizQuestions} />
+      <TakeQuizQuestion questionNumber={questionNumber} clickHandler={clickHandler} quizQuestions={quizQuestions} />
       <TakeQuizCount
         questionNumber={questionNumber}
         quizQuestions={quizQuestions}

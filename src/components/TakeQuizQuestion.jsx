@@ -1,19 +1,25 @@
-import React from 'react'
-import '../scss/_TakeQuizQuestion.scss'
+import React from "react";
+import "../scss/_TakeQuizQuestion.scss";
 
-function TakeQuizQuestion({quizQuestions}) {
-    console.log(quizQuestions.questions[0][0].content)
-    return (
-        <div className='takeQuizQuestion'>
-            <p className='takeQuizQuestionContent'>{quizQuestions.questions[0][0].content && quizQuestions.questions[0][0].content == undefined}</p>
-            <form  className='takeQuizAnswers'>
-                <button className='takeQuizAnswer'>quizQuestions.question</button>
-                <button className='takeQuizAnswer'>Odpowiedz 2</button>
-                <button className='takeQuizAnswer'>Odpowiedz 3</button>
-                <button className='takeQuizAnswer'>Odpowiedz 4</button>
-            </form>
+function TakeQuizQuestion({ quizQuestions,clickHandler,questionNumber }) {
+    
+  return (
+    <div className="takeQuizQuestion">
+      {quizQuestions && (
+        <p className="takeQuizQuestionContent">
+          {quizQuestions.questions[questionNumber][0].content}
+        </p>
+      )}
+      {quizQuestions && (
+        <div className="takeQuizAnswers">
+          <button onClick={clickHandler} data-correct={quizQuestions.questions[questionNumber][0].answers[0].correct} className="takeQuizAnswer">{quizQuestions.questions[questionNumber][0].answers[0].content}</button>
+          <button onClick={clickHandler} data-correct={quizQuestions.questions[questionNumber][0].answers[1].correct} className="takeQuizAnswer">{quizQuestions.questions[questionNumber][0].answers[1].content}</button>
+          <button onClick={clickHandler} data-correct={quizQuestions.questions[questionNumber][0].answers[2].correct} className="takeQuizAnswer">{quizQuestions.questions[questionNumber][0].answers[2].content}</button>
+          <button onClick={clickHandler} data-correct={quizQuestions.questions[questionNumber][0].answers[3].correct} className="takeQuizAnswer">{quizQuestions.questions[questionNumber][0].answers[3].content}</button>
         </div>
-    )
+      )}
+    </div>
+  );
 }
 
-export default TakeQuizQuestion
+export default TakeQuizQuestion;
