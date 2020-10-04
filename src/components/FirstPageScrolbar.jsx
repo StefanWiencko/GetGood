@@ -4,7 +4,7 @@ import FirstPageScrolCount from './FirstPageScrolCount'
 import FirstPageScrolElements from './FirstPageScrolElements'
 import '../scss/_FirstPageScrolbar.scss'
 
-function FirstPageScrolbar({allQuizes}) {
+function FirstPageScrolbar({allQuizes, chooseQuizHandler}) {
     const [isActive, setIsActive] = useState(false)
 
     const toggleIsActive =() =>{
@@ -13,9 +13,9 @@ function FirstPageScrolbar({allQuizes}) {
     return (
         <div className={isActive ? 'firstPageScrolbar isActive' : "firstPageScrolbar"} >
             <FirstPageScrolTitle/>
-            <FirstPageScrolElements allQuizes={allQuizes}/>
+            <FirstPageScrolElements chooseQuizHandler={chooseQuizHandler} allQuizes={allQuizes}/>
             <FirstPageScrolCount allQuizes={allQuizes}/>
-            <div on className='expand' onClick={toggleIsActive} className={isActive ? 'isActiveExpand expand' : 'expand'}></div>
+            <div onClick={toggleIsActive} className={isActive ? 'isActiveExpand expand' : 'expand'}></div>
         </div>
     )
 }

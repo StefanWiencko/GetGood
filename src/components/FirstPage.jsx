@@ -3,7 +3,7 @@ import "../scss/_FirstPage.scss";
 import FirstPageScrolbar from "./FirstPageScrolbar";
 import FirstPageButtons from "./FirstPageButtons";
 
-function FirstPage() {
+function FirstPage({chooseQuizHandler}) {
   useEffect(() => {
     fetchAllQuizes();
   },[]);
@@ -17,7 +17,7 @@ function FirstPage() {
   };
   return (
     <div className="firstPageContent">
-      <FirstPageScrolbar allQuizes={allQuizes} />
+      <FirstPageScrolbar chooseQuizHandler={chooseQuizHandler} allQuizes={allQuizes} />
       <FirstPageButtons/>
     </div>
   );

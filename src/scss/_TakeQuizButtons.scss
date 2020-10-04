@@ -1,0 +1,15 @@
+.buttonsBar{
+    height: 100px;
+    background-color: royalblue;
+    display: flex;
+}
+
+@media (min-width: 1024px){
+    .buttonsBar{
+        flex-direction: column;
+        align-self:flex-end;
+        margin: 20px 10px 0 0;
+        width: 200px;
+        height: 150px;
+    }
+}

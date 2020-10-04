@@ -1,0 +1,48 @@
+.takeQuizQuestion{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .takeQuizQuestionContent{
+        width: 200px;
+        height: 100px;
+        font-size: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .takeQuizAnswers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .takeQuizAnswer{
+            width: 200px;
+            height: 40px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .takeQuizQuestion{
+        .takeQuizQuestionContent{
+            width: 300px;
+            height: 100px;
+        }
+        .takeQuizAnswers{
+            .takeQuizAnswer{
+                height: 50px;
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .takeQuizQuestion{
+        margin-top: 50px;
+    }
+}

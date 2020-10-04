@@ -15,7 +15,7 @@ function NewQuizScrolbar({quizData}) {
             <NewQuizScrolTitle/>
             <NewQuizScrolElements quizData={quizData}/>
             <NewQuizScrolCount quizData={quizData}/>
-            <div className='expand' onClick={toggleIsActive} className={isActive ? 'isActive expand' : 'expand'}></div>
+            <div onClick={toggleIsActive} className={isActive ? 'isActive expand' : 'expand'}></div>
         </div>
     )
 }
