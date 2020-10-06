@@ -1,11 +1,11 @@
-.buttonsBar{
+.newQuizButtons{
     height: 100px;
     background-color: royalblue;
     display: flex;
 }
 
 @media (min-width: 1024px){
-    .buttonsBar{
+    .newQuizButtons{
         flex-direction: column;
         margin: 20px 10px 0 0;
         width: 200px;

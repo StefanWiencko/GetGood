@@ -1,14 +1,16 @@
-import React from 'react'
-import TakeQuizButton from './TakeQuizButton'
-import '../scss/_TakeQuizButtons.scss'
+import React from "react";
+import "../scss/_TakeQuizButtons.scss";
+import { Link } from "react-router-dom";
 
-function TakeQuizButtons() {
-    return (
-        <div className='buttonsBar'>
-            <TakeQuizButton />
-            <TakeQuizButton />
-        </div>
-    )
+function TakeQuizButtons({startOver}) {
+  return (
+    <div className="takeQuizButtons">
+      <div onClick={startOver} className="quizButton">Zacznij od początku</div>
+      <Link to='/' className="quizButton">
+        <div>Wyjdź</div>
+      </Link>
+    </div>
+  );
 }
 
-export default TakeQuizButtons
+export default TakeQuizButtons;
