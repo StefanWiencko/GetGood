@@ -12,7 +12,6 @@ function TakeQuiz({ quizID, correctCounterHandler, setCorrectCounter }) {
   const [quizQuestions, setQuizQuestions] = useState();
   const [questionNumber, setQuestionNumber] = useState(0);
 
-  
   const clickHandler = (e) => {
     correctCounterHandler(e);
     if (quizQuestions.questions.length > questionNumber + 1) {
@@ -32,6 +31,7 @@ function TakeQuiz({ quizID, correctCounterHandler, setCorrectCounter }) {
       .then((data) =>
         data.forEach((e) => {
           if (e.id === quizID) {
+            console.log('fetch')
             return setQuizQuestions(e);
           } else {
             return;
@@ -39,19 +39,23 @@ function TakeQuiz({ quizID, correctCounterHandler, setCorrectCounter }) {
         })
       );
   };
- console.log(quizQuestions)
+  console.log(quizQuestions);
   return (
     <div className="takeQuizContent">
-      <TakeQuizButtons  startOver={startOver}/>
-      <TakeQuizQuestion
-        questionNumber={questionNumber}
-        clickHandler={clickHandler}
-        quizQuestions={quizQuestions}
-      />
-      <TakeQuizCount
-        questionNumber={questionNumber}
-        quizQuestions={quizQuestions}
-      />
+      {quizQuestions && (
+        <>
+          <TakeQuizButtons startOver={startOver} />
+          <TakeQuizQuestion
+            questionNumber={questionNumber}
+            clickHandler={clickHandler}
+            quizQuestions={quizQuestions}
+          />
+          <TakeQuizCount
+            questionNumber={questionNumber}
+            quizQuestions={quizQuestions}
+          />
+        </>
+      )}
     </div>
   );
 }
