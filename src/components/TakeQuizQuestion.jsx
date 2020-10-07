@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/_TakeQuizQuestion.scss";
+import "../scss/_Main.scss";
 
 function TakeQuizQuestion({ quizQuestions,clickHandler,questionNumber }) {
     

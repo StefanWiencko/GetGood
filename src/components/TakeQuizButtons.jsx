@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/_TakeQuizButtons.scss";
+import "../scss/_Main.scss";
 import { Link } from "react-router-dom";
 
 function TakeQuizButtons({startOver}) {
@@ -7,7 +7,7 @@ function TakeQuizButtons({startOver}) {
     <div className="takeQuizButtons">
       <div onClick={startOver} className="quizButton">Zacznij od początku</div>
       <Link to='/' className="quizButton">
-        <div>Wyjdź</div>
+        Wyjdź
       </Link>
     </div>
   );

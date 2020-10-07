@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/_NewQuizButton.scss'
+import "../scss/_Main.scss";
 
 function AddQuizButton({clickHandler}) {
     return (

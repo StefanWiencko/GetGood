@@ -1,14 +1,25 @@
 import React, { useState} from "react";
-import "../scss/_MainView.scss";
+import "../scss/_Main.scss";
 import FirstPage from "./FirstPage";
 import NewQuiz from "./NewQuiz";
 import TakeQuiz from "./TakeQuiz";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function MainView() {
-
-  const [quizID, setQuizID] = useState(2);
+  const [quizQuestions, setQuizQuestions] = useState();
+  const [quizID, setQuizID] = useState(3);
   const [correctCounter, setCorrectCounter] = useState(0);
 
+  let fetchAllQuizes = () => {
+    fetch("http://localhost:4000/quizs")
+      .then((resp) => resp.json())
+      .then((data) =>
+        data.forEach((e) => {
+          if (e.id === quizID) {
+            setQuizQuestions(e);
+          }
+        })
+      );
+  };
   const correctCounterHandler = (e) => {
     if (e.target.dataset.correct === "true") {
       setCorrectCounter((prev) => prev + 1);
@@ -16,13 +27,17 @@ function MainView() {
   };
   const chooseQuizHandler = (e) => {
     setQuizID(e.target.id);
-  };
+    fetchAllQuizes()
 
+  };
+  // console.log(quizQuestions)
   return (
     <Router>
       <div className="appBody">
         <header className="header">
-          <div className="logo" />
+          <div className="logo" >
+            GetGood
+          </div>
         </header>
         <Switch>
           <Route
@@ -37,7 +52,9 @@ function MainView() {
               <TakeQuiz
                 setCorrectCounter={setCorrectCounter}
                 correctCounterHandler={correctCounterHandler}
-                quizID={quizID}
+
+                correctCounter={correctCounter}
+                quizQuestions={quizQuestions}
               />
             )}
           />

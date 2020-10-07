@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/_FirstPageScrolCount.scss'
+import "../scss/_Main.scss";
 
 function FirstPageScrolCount({allQuizes}) {
     return (

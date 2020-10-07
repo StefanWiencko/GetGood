@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/_NewQuizScrolElements.scss'
+import "../scss/_Main.scss";
 
 function NewQuizScrolElements({quizData}) {
     return (

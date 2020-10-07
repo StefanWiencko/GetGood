@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/_FirstPageButtons.scss";
+import "../scss/_Main.scss";
 import { Link } from "react-router-dom";
 
 function FirstPageButtons() {

@@ -1,18 +1,23 @@
 .appBody{
     background-color: purple;
     width: 1400px;
+    box-shadow: 10px 10px 28px -5px rgba(209,182,225,1);
 }
 
 .header{
     height: 70px;
-    background-color: rebeccapurple;
+    background-color: $color-dark-secondary;
     display: flex;
     justify-content: center;
+    border: 2px solid black;
+    border-bottom: none;
 }
 
 .logo{
     width: 80px;
-    background-color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // @media (max-width: 375px) {

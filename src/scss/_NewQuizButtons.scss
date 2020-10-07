@@ -4,6 +4,20 @@
     display: flex;
 }
 
+.quizButton{
+    height: 100%;
+    flex-grow: 1;
+    background-color: saddlebrown;
+    border: 1px solid springgreen;
+}
+
+@media (min-width: 1024px){
+    .quizButton{
+        margin: 5px;
+    }
+}
+
+
 @media (min-width: 1024px){
     .newQuizButtons{
         flex-direction: column;

@@ -1,6 +1,10 @@
 .firstPageScrolTitle{
     height: 80px;
-    background-color: aquamarine;
+    background-color: $color-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid $border-color;
 }
 
 @media (max-width: 1024px){

@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import NewQuizScrolTitle from './NewQuizScrolTitle'
 import NewQuizScrolCount from './NewQuizScrolCount'
 import NewQuizScrolElements from './NewQuizScrolElements'
-import '../scss/_NewQuizScrolbar.scss'
+import "../scss/_Main.scss";
 
 function NewQuizScrolbar({quizData}) {
     const [isActive, setIsActive] = useState(false)

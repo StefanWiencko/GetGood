@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "../scss/_FirstPage.scss";
+import "../scss/_Main.scss";
 import FirstPageScrolbar from "./FirstPageScrolbar";
 import FirstPageButtons from "./FirstPageButtons";
 
-function FirstPage({chooseQuizHandler}) {
+function FirstPage({chooseQuizHandler,fetchQuizHandler}) {
   useEffect(() => {
     fetchAllQuizes();
   },[]);
@@ -17,7 +17,7 @@ function FirstPage({chooseQuizHandler}) {
   };
   return (
     <div className="firstPageContent">
-      <FirstPageScrolbar chooseQuizHandler={chooseQuizHandler} allQuizes={allQuizes} />
+      <FirstPageScrolbar chooseQuizHandler={chooseQuizHandler} allQuizes={allQuizes} fetchQuizHandler={fetchQuizHandler}/>
       <FirstPageButtons/>
     </div>
   );

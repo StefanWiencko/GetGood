@@ -1,0 +1,29 @@
+.takeQuizSummary{
+    background-color: cadetblue;
+    height: 300px;
+    width: 100%;
+    top: 150px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px){
+    .takeQuizSummary{
+        left: 50%;
+        transform: translate(-50%,50%);
+        top: 0;
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px){
+    .takeQuizSummary{
+        left: 50%;
+        transform: translate(-50%,50%);
+        top: 0;
+        width: 50%;
+        height: 50%;
+    }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/_NewQuizInput.scss";
+import "../scss/_Main.scss";
 
 function NewQuizInput({ changeHandler, elementData, quizData }) {
   return (

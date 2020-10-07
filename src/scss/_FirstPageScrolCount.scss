@@ -1,10 +1,11 @@
 .firstPageScrolCount{
     height: 80px;
-    background-color: blue;
+    background-color: $color-secondary;
     justify-self: flex-end;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 2px solid $border-color;
 }
 
 @media (max-width: 1024px){

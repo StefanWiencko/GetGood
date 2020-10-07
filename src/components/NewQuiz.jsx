@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../scss/_NewQuiz.scss";
+import "../scss/_Main.scss";
 import NewQuizButtons from "./NewQuizButtons";
 import NewQuizinput from "./NewQuizInput";
 import NewQuizScrolbar from "./NewQuizScrolbar";

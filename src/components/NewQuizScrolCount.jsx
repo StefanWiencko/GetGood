@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/_NewQuizScrolCount.scss'
+import "../scss/_Main.scss";
 
 function NewQuizScrolCount({quizData}) {
     return (

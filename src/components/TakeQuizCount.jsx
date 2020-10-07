@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/_TakeQuizCount.scss'
+import "../scss/_Main.scss";
 
 function TakeQuizCount({quizQuestions,questionNumber}) {
     return (
