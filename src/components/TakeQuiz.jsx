@@ -31,7 +31,6 @@ function TakeQuiz({ quizID, correctCounterHandler, setCorrectCounter }) {
       .then((data) =>
         data.forEach((e) => {
           if (e.id === quizID) {
-            console.log('fetch')
             return setQuizQuestions(e);
           } else {
             return;
