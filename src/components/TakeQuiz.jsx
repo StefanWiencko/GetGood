@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "../scss/_Main.scss";
 import TakeQuizQuestion from "./TakeQuizQuestion";
 import TakeQuizButtons from "./TakeQuizButtons";
@@ -12,12 +12,6 @@ function TakeQuiz({
   quizQuestions
 }) {
   const [questionNumber, setQuestionNumber] = useState(0);
-
-  useEffect(() => {
-    shuffleQuestions(quizQuestions);
-  }, []);
-
-  console.log(quizQuestions)
 
   const clickHandler = (e) => {
     correctCounterHandler(e);

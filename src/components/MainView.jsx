@@ -8,34 +8,29 @@ function MainView() {
   useEffect(() => {
     fetchAllQuizes();
   }, []);
+
   const [quizQuestions, setQuizQuestions] = useState();
-  const [quizID, setQuizID] = useState(1);
   const [correctCounter, setCorrectCounter] = useState(0);
 
-  let fetchAllQuizes = () => {
+  const fetchAllQuizes = (quizID) => {
     fetch("http://localhost:4000/quizs")
       .then((resp) => resp.json())
-      .then((data) =>
-        data.forEach((e) => {
-          if (e.id == quizID) {
-            setQuizQuestions(e);
-          }
-        })
-      );
+      .then((data) => {
+        const currentQuiz = data.find((item) => item.id == quizID);
+        setQuizQuestions(currentQuiz);
+      });
   };
 
-  const correctCounterHandler = (e) => {
-    if (e.target.dataset.correct === "true") {
+  const correctCounterHandler = (event) => {
+    if (event.target.dataset.correct === "true") {
       setCorrectCounter((prev) => prev + 1);
     }
   };
-  const chooseQuizHandler = (e) => {
-    setQuizID(e.target.id);
-   fetchAllQuizes()
+  const chooseQuizHandler = (event) => {
+    fetchAllQuizes(event.target.id);
   };
   return (
     <Router>
-      {console.log(quizQuestions)}
       <div className="appBody">
         <header className="header">
           <div className="logo">GetGood</div>
@@ -55,7 +50,6 @@ function MainView() {
                 correctCounterHandler={correctCounterHandler}
                 correctCounter={correctCounter}
                 quizQuestions={quizQuestions}
-                quizID={quizID}
               />
             )}
           />
