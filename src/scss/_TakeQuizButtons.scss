@@ -1,7 +1,30 @@
 .takeQuizButtons{
     height: 100px;
-    background-color: royalblue;
     display: flex;
+}
+
+.quizButton{
+    height: 100%;
+    flex-grow: 1;
+    background-color: $color-secondary;
+    border: 1px solid $border-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-size: $button-font-size;
+    &:hover{
+        color: blue;
+        box-shadow: inset 0px 0px 48px 11px rgba(209,182,225,1);
+    }
+}
+
+@media (min-width: 1024px){
+    .quizButton{
+        margin: 5px;
+    }
 }
 
 @media (min-width: 1024px){

@@ -1,24 +1,21 @@
 .newQuizScrolElements{
     height: 100%;
-    background-color: blueviolet;
+    background-color: $color-dark-secondary;
     flex-grow: 1;
     overflow-y: auto;
+    border: 2px solid $border-color;
+    border-left: none;
 }
 
 .newQuizScrolElement{
     height: 60px;
-    background-color: brown;
     margin: 10px 10px 0 10px;
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $color-secondary;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    flex-wrap: wrap;
 }
-
-// @media (max-width: 1024px){
-//     .newQuizScrolElements{
-   
-//     }
-
-//     .newQuizScrolElement{
-// }

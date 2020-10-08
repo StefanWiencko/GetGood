@@ -17,8 +17,9 @@ function TakeQuiz({
   useEffect(() => {
     // fetchAllQuizes();
     // console.log("fetch", quizQuestions);
+    shuffleQuestions(quizQuestions);
   }, []);
-
+  console.log(quizQuestions)
   const clickHandler = (e) => {
     correctCounterHandler(e);
     if (quizQuestions.questions.length > questionNumber) {
@@ -32,7 +33,7 @@ function TakeQuiz({
     setCorrectCounter(0);
     // setQuizQuestions((prev) => shuffle(prev));
   };
-
+  
   function shuffle(array) {
     var m = array.length,
       t,
