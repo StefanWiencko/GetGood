@@ -1,5 +1,5 @@
 .takeQuizSummary{
-    background-color: cadetblue;
+    background-color: $color-dark-secondary;
     height: 300px;
     width: 100%;
     top: 150px;
@@ -7,6 +7,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: $scrol-font-size;
+    border: 2px solid $border-color;
 }
 
 @media (min-width: 768px){

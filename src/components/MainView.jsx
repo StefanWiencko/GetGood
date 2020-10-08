@@ -9,32 +9,19 @@ function MainView() {
     fetchAllQuizes();
   }, []);
   const [quizQuestions, setQuizQuestions] = useState();
-  const [allQuizes, setAllQuizes] = useState();
   const [quizID, setQuizID] = useState(1);
   const [correctCounter, setCorrectCounter] = useState(0);
 
-  // let fetchAllQuizes = (id) => {
-  //   fetch("http://localhost:4000/quizs")
-  //     .then((resp) => resp.json())
-  //     // .then(id => setQuizID(id))
-  //     .then((data) =>
-  //       data.forEach((e) => {
-  //         if (e.id == quizID) {
-  //           setAllQuizes(e);
-  //         }
-  //       })
-  //     );
-  // };
-
-  const fetchAllQuizes = () => {
+  let fetchAllQuizes = () => {
     fetch("http://localhost:4000/quizs")
       .then((resp) => resp.json())
-      .then((data) => setAllQuizes(data));
-    // .then((id) => {
-    //   setQuizID(id);
-    //   console.log(quizID, "id");
-    // })
-    // .then()
+      .then((data) =>
+        data.forEach((e) => {
+          if (e.id == quizID) {
+            setQuizQuestions(e);
+          }
+        })
+      );
   };
 
   const correctCounterHandler = (e) => {
@@ -44,11 +31,7 @@ function MainView() {
   };
   const chooseQuizHandler = (e) => {
     setQuizID(e.target.id);
-    allQuizes.forEach((element) => {
-      if(element.id == quizID){
-        setQuizQuestions(element)
-      }
-    });
+   fetchAllQuizes()
   };
   return (
     <Router>

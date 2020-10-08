@@ -11,15 +11,14 @@ function TakeQuiz({
   correctCounter,
   quizQuestions
 }) {
-  // const [quizQuestions, setQuizQuestions] = useState();
   const [questionNumber, setQuestionNumber] = useState(0);
 
   useEffect(() => {
-    // fetchAllQuizes();
-    // console.log("fetch", quizQuestions);
     shuffleQuestions(quizQuestions);
   }, []);
+
   console.log(quizQuestions)
+
   const clickHandler = (e) => {
     correctCounterHandler(e);
     if (quizQuestions.questions.length > questionNumber) {
@@ -31,7 +30,6 @@ function TakeQuiz({
   const startOver = () => {
     setQuestionNumber(0);
     setCorrectCounter(0);
-    // setQuizQuestions((prev) => shuffle(prev));
   };
   
   function shuffle(array) {
@@ -58,18 +56,6 @@ function TakeQuiz({
     obj.questions.forEach((arr) => shuffle(arr[0].answers));
   };
 
-  // const fetchAllQuizes = () => {
-  //   fetch("http://localhost:4000/quizs")
-  //     .then((resp) => resp.json())
-  //     .then((data) =>
-  //       data.forEach((e) => {
-  //         if (e.id === quizID) {
-  //           setQuizQuestions(e);
-  //         }
-  //       })
-  //     );
-  // };
-  // console.log(quizQuestions)
   if (quizQuestions) {
     shuffleQuestions(quizQuestions);
   }

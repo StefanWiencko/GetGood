@@ -48,16 +48,6 @@ function NewQuiz() {
   }
 
   const quizSubmit = () => {
-    if (
-      elementData.title === "" &&
-      elementData.question === "" &&
-      elementData.correctAnswer === "" &&
-      elementData.answer1 === "" &&
-      elementData.answer2 === "" &&
-      elementData.answer3 === ""
-    ) {
-      return alert("Wypełnij puste pola");
-    }
     setQuizData((prev) => [...prev, elementData]);
     fetch(`http://localhost:4000/quizs`, {
       method: "POST",

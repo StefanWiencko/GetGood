@@ -6,7 +6,7 @@ function TakeQuizButtons({startOver}) {
   return (
     <div className="takeQuizButtons">
       <div onClick={startOver} className="quizButton">Zacznij od początku</div>
-      <Link to='/' className="quizButton">
+      <Link onClick={startOver} to='/' className="quizButton">
         Wyjdź
       </Link>
     </div>
