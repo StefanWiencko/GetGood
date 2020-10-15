@@ -1,12 +1,11 @@
 .landingPageScrolCount{
     height: 80px;
-    background-color: $color-secondary;
     justify-self: flex-end;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid $border-color;
     font-size: 20px;
+    color: $text-color;
 }
 
 @media (max-width: 1024px){

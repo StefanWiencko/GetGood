@@ -7,11 +7,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: $text-color;
         font-size: 20px;
         input{
             height: 30px;
             width: 275px;
+            color: $text-color;
             font-size: $button-font-size;
+            border: 1px solid $border-color;
+            border-radius: $border-radius;
+            padding: 0 10px;
         }
     }
 }

@@ -1,16 +1,15 @@
-.newQuizScrolCount{
-    height: 80px;
-    background-color: $color-secondary;
-    justify-self: flex-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 2px solid $border-color;
-    font-size: $scrol-font-size;
+.newQuizScrolCount {
+  height: 80px;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $scrol-font-size;
+  color: $text-color;
 }
 
-@media (max-width: 1024px){
-    .newQuizScrolCount{
-        display: none;
-    }
+@media (max-width: 1024px) {
+  .newQuizScrolCount {
+    display: none;
+  }
 }

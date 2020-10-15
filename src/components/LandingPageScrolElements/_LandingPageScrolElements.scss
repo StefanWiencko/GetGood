@@ -1,26 +1,23 @@
 .landingPageScrolElements{
     height: 100%;
-    background-color: $color-dark-secondary;
     flex-grow: 1;
     overflow-y: auto;
 }
 
 .landingPageScrolElement{
-    height: 60px;
-    background-color: $color-secondary;
+    height: 40px;
+    background-color: $color-main;
     margin: 10px 10px 0 10px;
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid $border-color;
-    border-radius: 5px;
-    color: black;
+    border-radius: $border-radius;
+    color: $button-text-color;
     text-decoration: none;
     flex-wrap: wrap;
     &:hover{
-        color: blue;
-        box-shadow: inset 0px 0px 48px 11px rgba(209,182,225,1);
+        box-shadow: inset 0px 0px 18px 11px rgba(209,182,225,1);
     }
 }
 

@@ -6,24 +6,26 @@
 .quizButton{
     height: 100%;
     flex-grow: 1;
-    background-color: $color-secondary;
-    border: 1px solid $border-color;
+    padding: 10px;
+    background-color: $color-main;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: black;
-    border-radius: 5px;
+    color: $button-text-color;
+    border-radius: $border-radius;
     font-size: $button-font-size;
+    width: 33%;
     &:hover{
-        color: blue;
-        box-shadow: inset 0px 0px 48px 11px rgba(209,182,225,1);
+        box-shadow: inset 0px 0px 18px 11px rgba(209,182,225,1);
     }
 }
 
 @media (min-width: 1024px){
     .quizButton{
         margin: 5px;
+        width: 100%;
     }
 }
 
@@ -34,5 +36,6 @@
         margin: 20px 10px 0 0;
         width: 200px;
         height: 150px;
+        // width: 33%;
     }
 }

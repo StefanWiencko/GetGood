@@ -1,10 +1,10 @@
 .newQuizScrolbar {
   height: 100%;
   width: 220px;
-  background-color: tan;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .isActive{
@@ -15,34 +15,34 @@
     height: calc(100% - 170px);
     position: absolute;
     bottom: 0;
-  }
-  .expand{
-    width: 40px;
-    height: 40px;
-    background-color: $color-secondary;
-    position: absolute;
-    right:-27px;
-    top: 10%;
-    transform: translate(50% ,-50%);
-    z-index: 1;
-    border: 1px solid $border-color;
-    border-radius: 50px;
-    &::after{
+    .expand{
+      width: 40px;
+      height: 40px;
       position: absolute;
-      content: '';
-      top: 50%;
-      right: 50%;
-      width: 15px;
-      height: 15px;
-      border:3px solid $border-color;
-      transform:translate(50% ,-50%) rotate(45deg) ;
-      border-top: none;
-      border-right: none;
-    }
+      background-color: $color-main;
+      right:-27px;
+      top: 10%;
+      transform: translate(50% ,-50%);
+      z-index: 1;
+      border: 1px solid $border-color;
+      border-radius: 50px;
+      &::after{
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: 50%;
+        width: 15px;
+        height: 15px;
+        border:3px solid $border-color;
+        transform:translate(50% ,-50%) rotate(45deg) ;
+        border-top: none;
+        border-right: none;
+      }
+  }
+
 }
 .isActive{
   left: 0px;
-  background-color: $color-secondary;
   &::after{
     border:3px solid $border-color;
     border-bottom: none;

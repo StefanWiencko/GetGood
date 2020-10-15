@@ -1,11 +1,9 @@
 .takeQuizContent{
-    background-color: $color-primary;
     height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    border: 2px solid $border-color;
 }
 
 @media (min-width: 1024px){

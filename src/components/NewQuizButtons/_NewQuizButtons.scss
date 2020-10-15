@@ -6,6 +6,9 @@
 .quizButton{
     height: 100%;
     flex-grow: 1;
+    width: 33%;
+    margin: 20px 10px;
+    word-wrap: break-word;
 }
 
 @media (min-width: 1024px){
