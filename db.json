@@ -1,5 +1,5 @@
 {
-  "quizs": [
+  "quizzes": [
     {
       "name": "aaa",
       "questions": [
@@ -99,151 +99,7 @@
       "id": 1
     },
     {
-      "name": "Test",
-      "questions": [
-        [
-          {
-            "content": "jeden",
-            "answers": [
-              {
-                "content": "1",
-                "correct": true
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              },
-              {
-                "content": "4",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "asdasd",
-            "answers": [
-              {
-                "content": "1",
-                "correct": true
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              },
-              {
-                "content": "4",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "asdasd",
-            "answers": [
-              {
-                "content": "1",
-                "correct": true
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              },
-              {
-                "content": "4",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "a",
-            "answers": [
-              {
-                "content": "4",
-                "correct": true
-              },
-              {
-                "content": "3",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "1",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "cc",
-            "answers": [
-              {
-                "content": "4",
-                "correct": true
-              },
-              {
-                "content": "3",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "1",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "aaa",
-            "answers": [
-              {
-                "content": "3",
-                "correct": true
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "4",
-                "correct": false
-              }
-            ]
-          }
-        ]
-      ],
-      "id": 2
-    },
-    {
-      "name": "Test 2",
+      "name": "aaa",
       "questions": [
         [
           {
@@ -270,259 +126,29 @@
         ],
         [
           {
-            "content": "2",
+            "content": "asdasd",
             "answers": [
               {
-                "content": "2",
+                "content": "s",
                 "correct": true
               },
               {
-                "content": "1",
+                "content": "2",
+                "correct": false
+              },
+              {
+                "content": "3",
                 "correct": false
               },
               {
                 "content": "4",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "3",
-            "answers": [
-              {
-                "content": "3",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "4",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "4",
-            "answers": [
-              {
-                "content": "4",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "5",
-            "answers": [
-              {
-                "content": "5",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "6",
-            "answers": [
-              {
-                "content": "6",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "7",
-            "answers": [
-              {
-                "content": "7",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "8",
-            "answers": [
-              {
-                "content": "8",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "9",
-            "answers": [
-              {
-                "content": "9",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "10",
-            "answers": [
-              {
-                "content": "10",
-                "correct": true
-              },
-              {
-                "content": "3",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "4",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "11",
-            "answers": [
-              {
-                "content": "11",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
-                "correct": false
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "content": "12",
-            "answers": [
-              {
-                "content": "12",
-                "correct": true
-              },
-              {
-                "content": "1",
-                "correct": false
-              },
-              {
-                "content": "2",
-                "correct": false
-              },
-              {
-                "content": "3",
                 "correct": false
               }
             ]
           }
         ]
       ],
-      "id": 3
+      "id": 2
     }
   ]
 }
